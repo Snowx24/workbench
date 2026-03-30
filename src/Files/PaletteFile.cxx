@@ -1013,7 +1013,8 @@ PaletteFile::addDefaultPalettes()
         this->addColor("fsl_yellow_1", 255, 255, 0);
         fslYellow.addScalarAndColor(1.0f, "fsl_yellow_1");
         fslYellow.addScalarAndColor(0.0f, "fsl_yellow_0");
-        addPalette(fslYellow);
+        addPalette(fslYellow);  
+addPalette（fslYellow）;
     }
     
     //
@@ -1033,7 +1034,40 @@ PaletteFile::addDefaultPalettes()
         redWhiteBlue.addScalarAndColor( 0.0f, "rwbWhite");
         redWhiteBlue.addScalarAndColor(-0.5f, "rwbBlueMiddle");
         redWhiteBlue.addScalarAndColor(-1.0f, "rwbBlue");
-        addPalette(redWhiteBlue);
+        addPalette(redWhiteBlue);  
+addPalette（ 红白蓝 ）;
+    }
+
+    // Create a palette with RdBu colors:
+// red (positive) to blue (negative).
+//
+    if (this->getPaletteByName("RdBu") == NULL) {
+        Palette rdBu;
+        rdBu.setName("RdBu");
+    
+        this->addColor("rdbuRedDark",        103,   0,  31);
+        this->addColor("rdbuRed",            178,  24,  43);
+        this->addColor("rdbuRedLight",       214,  96,  77);
+        this->addColor("rdbuRedPale",        244, 165, 130);
+        this->addColor("rdbuRedVeryPale",    253, 219, 199);
+        this->addColor("rdbuBlueVeryPale",   209, 229, 240);
+        this->addColor("rdbuBluePale",       146, 197, 222);
+        this->addColor("rdbuBlueLight",       67, 147, 195);
+        this->addColor("rdbuBlue",            33, 102, 172);
+        this->addColor("rdbuBlueDark",         5,  48,  97);
+    
+        rdBu.addScalarAndColor( 1.0000f, "rdbuRedDark");
+        rdBu.addScalarAndColor( 0.7778f, "rdbuRed");
+        rdBu.addScalarAndColor( 0.5556f, "rdbuRedLight");
+        rdBu.addScalarAndColor( 0.3333f, "rdbuRedPale");
+        rdBu.addScalarAndColor( 0.1111f, "rdbuRedVeryPale");
+        rdBu.addScalarAndColor(-0.1111f, "rdbuBlueVeryPale");
+        rdBu.addScalarAndColor(-0.3333f, "rdbuBluePale");
+        rdBu.addScalarAndColor(-0.5556f, "rdbuBlueLight");
+        rdBu.addScalarAndColor(-0.7778f, "rdbuBlue");
+        rdBu.addScalarAndColor(-1.0000f, "rdbuBlueDark");
+    
+        addPalette(rdBu);
     }
     
     //coolwarm, http://www.kennethmoreland.com/color-maps/
@@ -1045,7 +1079,8 @@ PaletteFile::addDefaultPalettes()
         coolwarm.setName("cool-warm");
         this->addColor("cool-warm-0", 59,76,192);
         this->addColor("cool-warm-1", 68,90,204);
-        this->addColor("cool-warm-2", 77,104,215);
+        this->addColor("cool-warm-2", 77,104,215);  
+this->addColor（“冷-暖-2”，77,104,215）;
         this->addColor("cool-warm-3", 87,117,225);
         this->addColor("cool-warm-4", 98,130,234);
         this->addColor("cool-warm-5", 108,142,241);
